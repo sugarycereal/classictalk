@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Classic Talk</title>
+    <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1"
+    />
+    <link rel="stylesheet" href="classictalk.css">
+    <!-- Link Swiper's CSS -->
+
+    <!-- Demo styles -->
+
+</head>
+
+<body>
+<div class="wrap">
+    <!--
+    <div class="intro">
+
+    </div>
+    -->
+    <header>
+        <div class="common-header list-header">
+            <h1>Friends</h1>
+            <div class="header-btns">
+                <ul>
+                    <li>
+                        <button type="button">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </button>
+                    </li>
+                    <li>
+                        <button type="button">
+                            <i class="fa-solid fa-user-plus"></i>
+                        </button>
+                    </li>
+                    <li>
+                        <button type="button">
+                            <i class="fa-solid fa-music"></i>
+                        </button>
+                    </li>
+                    <li>
+                        <button type="button">
+                            <i class="fa-solid fa-gear"></i>
+                        </button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <nav>
+        <ul>
+            <li class="on">
+                <button type="button" onclick = "location.href = './page01_friends.html'">
+                    <span><i class="fa-solid fa-user"></i></span>
+                </button>
+            </li>
+            <li>
+                <button type="button" onclick = "location.href = './page02_chats.html'">
+                    <span><i class="fa-solid fa-comment"></i></span>
+                </button>
+            </li>
+            <li>
+                <button>
+                    <span><i class="fa-solid fa-magnifying-glass"></i></span>
+                </button>
+            </li>
+            <li>
+                <button>
+                    <span><i class="fa-solid fa-ellipsis-vertical"></i></span>
+                </button>
+            </li>
+        </ul>
+    </nav>
+    <main>
+        <section>
+            <div class="friends-list-wrap">
+                <div class="friends-list-box me">
+                    <h2>Me</h2>
+                    <ul class="friends-list">
+                        <li class="friends-list-item">
+                            <a href="./page01_friends-me.html">
+                                <div class="friends-list-profile">
+                                    <span class="friends-list-img">
+                                        <img src="./images/me.jpg" alt="chopin">
+                                    </span>
+                                    <span class="friends-list-name">me</span>
+                                </div>
+                                <div class="my-music-box">
+                                    <button type="button" class="btn-my-music">
+                                        <span>Friends♥♥♥♥♥</span>
+                                        <i class="fa-solid fa-play"></i>
+                                    </button>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="friends-list-box">
+                    <h2>My Friends</h2>
+                    <ul class="friends-list">
+                        <li class="friends-list-item">
+                            <a href="">
+                                <div class="friends-list-profile">
+                                    <span class="friends-list-img">
+                                        <img src="./images/beethoven.jpg" alt="beethoven">
+                                    </span>
+                                    <span class="friends-list-name">Beethoven</span>
+                                </div>
+                                <div class="my-music-box">
+                                    <button type="button" class="btn-my-music">
+                                        <span>Piano Sonata c minor op. 13</span>
+                                        <i class="fa-solid fa-play"></i>
+                                    </button>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="friends-list-item">
+                            <a href="">
+                                <div class="friends-list-profile">
+                                    <span class="friends-list-img">
+                                        <img src="./images/mozart.jpg" alt="mozart">
+                                    </span>
+                                    <span class="friends-list-name">Mozart</span>
+                                </div>
+                                <div class="my-music-box">
+                                    <button type="button" class="btn-my-music">
+                                        <span>Allegro in D major K 626b/16</span>
+                                        <i class="fa-solid fa-play"></i>
+                                    </button>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="friends-list-item">
+                            <a href="">
+                                <div class="friends-list-profile">
+                                    <span class="friends-list-img">
+                                        <img src="./images/chopin.jpg" alt="chopin">
+                                    </span>
+                                    <span class="friends-list-name">Chopin</span>
+                                </div>
+                                <div class="my-music-box">
+                                    <button type="button" class="btn-my-music">
+                                        <span>Prelude C major op. 28,1</span>
+                                        <i class="fa-solid fa-play"></i>
+                                    </button>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="friends-list-item">
+                            <a href="">
+                                <div class="friends-list-profile">
+                                    <span class="friends-list-img">
+                                        <img src="./images/liszt.png" alt="liszt">
+                                    </span>
+                                    <span class="friends-list-name">Liszt</span>
+                                </div>
+                                <div class="my-music-box">
+                                    <button type="button" class="btn-my-music">
+                                        <span>O lieb, so lang du lieben kannst!</span>
+                                        <i class="fa-solid fa-play"></i>
+                                    </button>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="friends-list-item">
+                            <a href="">
+                                <div class="friends-list-profile">
+                                    <span class="friends-list-img">
+                                        <img src="./images/debussy.jpg" alt="debussy">
+                                    </span>
+                                    <span class="friends-list-name">Debussy</span>
+                                </div>
+                                <div class="my-music-box">
+                                    <button type="button" class="btn-my-music">
+                                        <span>Clair de lune D flat major</span>
+                                        <i class="fa-solid fa-play"></i>
+                                    </button>
+                                </div>
+                            </a>
+                        </li>
+
+                    </ul>
+
+                </div>
+            </div>
+        </section>
+    </main>
+</div>
+<script src="https://kit.fontawesome.com/0312b2b3c1.js" crossorigin="anonymous"></script>
+</body>
+</html>

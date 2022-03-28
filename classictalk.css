@@ -1,0 +1,479 @@
+@charset "UTF-8";
+
+/* 폰트 스타일 */
+@font-face {
+  font-family: 'Satisfy';
+  font-style: normal;
+  font-weight: 400;
+  src: url(./font/Satisfy-Regular.ttf);
+}
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+body {
+  line-height: 1;
+  font-family: 'Satisfy', sans-serif;
+}
+ol, ul {
+  list-style: none;
+}
+blockquote, q {
+  quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+input{
+  font-family: 'Satisfy', sans-serif;
+}
+
+
+
+/* base */
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body{
+  height: 100vh;
+  background-color: rgba(228, 203, 178, 0.8);
+}
+button{
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+  font-family: 'Satisfy', sans-serif;
+}
+ul{
+  padding: 0;
+  list-style: none;
+}
+
+img{
+  display: block;
+  max-width: 100%;
+}
+strong{
+  font-size: 24px;
+  line-height: 30px;
+}
+
+/* common */
+.wrap{
+  display: flex;
+  flex-direction: column;
+  background-image: url("./images/notes.jpg");
+  background-size: cover;
+  background-position: top center;
+}
+.common-header{
+  position: fixed;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  background-color: #fff;
+  z-index: 1;
+}
+.list-header{
+  background-color: rgba(228, 203, 178, 0.8);
+}
+.profile-header{
+  background-color: transparent;
+}
+h1{
+  flex: 2;
+  font-size: 30px;
+  line-height: 40px;
+  padding: 10px 10px;
+}
+.header-btns ul{
+  display: flex;
+  justify-content: space-between;
+}
+.header-btns .btn-close{
+
+}
+.header-btns i{
+  font-size: 20px;
+}
+.header-btns button{
+  width: 40px;
+  height: 40px;
+}
+nav ul{
+  position: fixed;
+  bottom: 0;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  background: rgba(228, 203, 178, 0.8);
+}
+nav li{
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+nav button{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 10px 0;
+}
+nav i{
+  font-size: 20px;
+}
+nav button span{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+}
+nav li.on span{
+  color: #fff;
+  background-color: #d7bfa9;
+  border-radius: 50%;
+}
+main{
+  padding: 60px 0;
+}
+
+/* welcome */
+@keyframes intro {
+  from {
+    display: block;
+  }
+  to   {
+    display: none;
+  }
+}
+.intro{
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  animation: 1s ease-out 1s forwards intro;
+  background-color: pink;
+}
+.welcome-main{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.welcome-main h2{
+  padding: 20px 0;
+  text-align: center;
+  font-size: 50px;
+  color: #fff;
+}
+.input-area{
+  padding: 10px 0;
+}
+.welcome-login label{
+  border: none;
+}
+.welcome-login input{
+  width: 320px;
+  padding: 10px 10px;
+  background-color: transparent;
+  border: 1px solid #fff;
+  color: #fff;
+}
+input[type="text"]::placeholder{
+  color: #fff;
+}
+
+.btn-login{
+  width: 100%;
+  padding: 10px 0;
+  margin: 20px 0;
+  color: #fff;
+  font-size: 20px;
+  line-height: 30px;
+  background: rgba(228, 203, 178, 0.2);
+  border-radius: 30px;
+}
+
+/* page 1: Friends */
+.friends-list-box h2{
+  padding: 10px 10px;
+  font-size: 16px;
+  line-height: 20px;
+  color: #fff;
+  background-color: rgba(228, 203, 178, 0.2);
+
+}
+.friends-list{
+  margin: 0 10px;
+  padding: 10px 0;
+  border-bottom: 1px solid #ffffff;
+}
+.friends-list-item a{
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 0;
+  color: #000;
+  text-decoration: none;
+}
+.friends-list-profile{
+  flex: 1;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.friends-list-img{
+  display: block;
+  width: 50px;
+  height: 50px;
+  overflow: hidden;
+  border-radius: 50%;
+}
+.me .friends-list-img{
+  width: 80px;
+  height: 80px;
+}
+.friends-list-name{
+  display: block;
+  padding-left: 20px;
+  font-weight: 700;
+  color: #fff;
+}
+.my-music-box{
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.btn-my-music{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px 10px;
+  border: 2px solid #ffffff;
+  border-radius: 20px;
+}
+.btn-my-music span{
+  display: block;
+  margin-right: 10px;
+  font-size: 12px;
+  line-height: 16px;
+  color: #fff;
+}
+@media screen and (max-width: 768px){
+  .btn-my-music span{
+    display: block;
+    margin-right: 10px;
+    font-size: 12px;
+    line-height: 16px;
+  }
+}
+.btn-play{
+  margin-left: 10px;
+}
+
+/* list > chat time*/
+.chats-info{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+.chats-info span{
+  display: block;
+  font-size: 14px;
+  line-height: 18px;
+  color: #fff;
+}
+.chats-info span.new-message{
+  display: block;
+  width: 20px;
+  height: 20px;
+  text-align: center;
+  background-color: #f00;
+  border-radius: 50%;
+}
+
+/* chat */
+.message-wrap{
+
+}
+.message-box{
+  position: fixed;
+  bottom: 0;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  background-color: #fff;
+  z-index: 2;
+}
+
+.message-btns{
+  display: flex;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.message-btns button{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60px;
+  padding: 20px 0;
+  font-size: 20px;
+  background-color: #fff;
+}
+.messaga-textarea{
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+.messaga-textarea label,
+.messaga-textarea input{
+  width: 100%;
+  padding: 5px 0;
+  border-radius: 20px;
+}
+.chats-wrap{
+  background-image: url("./images/bg-chopin.jpg");
+  background-size: cover;
+  background-position: top center;
+}
+.chats-list{
+  padding: 10px 10px;
+}
+.chats-list-item{
+  display: flex;
+  align-items: flex-start;
+}
+.chats-list-left .chats-list-item{
+  justify-content: flex-start;
+}
+.chats-list-right .chats-list-item{
+  justify-content: flex-end;
+}
+.chats-list-img{
+  display: block;
+  width: 50px;
+  height: 50px;
+  overflow: hidden;
+  border-radius: 50%;
+}
+.chats-list-name{
+  display: block;
+  padding: 10px 10px;
+}
+.chats-list-left .chats-list-item2{
+  text-align: left;
+}
+.chats-list-right .chats-list-item2{
+  text-align: right;
+}
+.chats-list-item2 ul{
+  position: relative;
+}
+.chats-list-item2 li{
+  position: relative;
+  padding: 10px 10px;
+}
+
+.chats-list-item2 li span{
+  display: inline-block;
+  padding: 10px 10px;
+  background-color: #fff;
+  border-radius: 20px;
+}
+
+/* my profile */
+.profile-main{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.profile-wrap{
+  height: 100vh;
+  background-image: url("./images/my-bg.jpg");
+  background-size: cover;
+  background-position: top center;
+}
+.profile-header .header-btns{
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  color: #fff;
+}
+.profile-header button{
+  width: 60px;
+  height: 60px;
+  color: #fff;
+  border-radius: 50%;
+}
+.profile-header i{
+  font-size: 32px;
+  line-height: 40px;
+}
+.profile-box{
+  min-width: 320px;
+  color: #fff;
+}
+.profile-info{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  font-size: 30px;
+  line-height: 40px;
+}
+.profile-info h2{
+  font-weight: 700;
+  padding: 10px 0;
+}
+.profile-img{
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.profile-bottom-btns ul{
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+  padding: 20px 0;
+}
